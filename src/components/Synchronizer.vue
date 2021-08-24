@@ -57,7 +57,7 @@ export default {
     },
     async syncContacts() {
       this.syncing = true;
-      const REQUEST_URL = "http://localhost:3000/sync";
+      const REQUEST_URL = process.env.SYNC_URL || "http://localhost:3000/sync";
       const { data } = await axios.put(REQUEST_URL);
       this.syncing = false;
       this.ammountSynced = data.sent;

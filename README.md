@@ -6,5 +6,4 @@ An actual README
 Unit tests
 Change state logic - currently the same on all components
 Change request to new component - refactor
-Loader blocking screen
 Blink on outside click

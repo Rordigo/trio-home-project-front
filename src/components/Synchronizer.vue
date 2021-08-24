@@ -56,8 +56,6 @@ export default {
       }
     },
     async syncContacts() {
-      console.log("TEST:")
-      console.log(process.env)
       this.syncing = true;
       const API_URL = process.env.VUE_APP_API_URL || "http://localhost:3000"
       const SYNC_URL =  `${API_URL}/sync`;

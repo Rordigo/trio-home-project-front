@@ -56,6 +56,7 @@ export default {
       }
     },
     async syncContacts() {
+      console.log("TEST:")
       console.log(process.env)
       this.syncing = true;
       const API_URL = process.env.API_URL || "http://localhost:3000"

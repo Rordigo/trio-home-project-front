@@ -7,7 +7,7 @@ export default {
   name: "SyncText",
   props: {
     state: String,
-    ammountSynced: Number,
+    amountSynced: Number,
   },
   methods: {
     templateContactsSynced() {
@@ -15,7 +15,7 @@ export default {
         case "NOT_SYNCED":
           return "Sync Contacts";
         case "SYNCED":
-          return `${this.ammountSynced} contacts were synced!`;
+          return `${this.amountSynced} contacts were synced!`;
         default:
           return "Sync Contacts";
       }

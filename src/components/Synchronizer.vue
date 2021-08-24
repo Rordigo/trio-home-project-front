@@ -5,7 +5,7 @@
     </div>
     <div class="containerFlex">
       <SyncButton :state="state" @click="this.handleButton()" />
-      <SyncText :state="state" :ammountSynced="ammountSynced" />
+      <SyncText :state="state" :amountSynced="amountSynced" />
     </div>
   </div>
   <div class="loadingContainer" v-if="syncing">
@@ -35,7 +35,7 @@ export default {
         NOT_SYNCED: "NOT_SYNCED",
         SYNCED: "SYNCED",
       },
-      ammountSynced: 0,
+      amountSynced: 0,
       syncing: false,
     };
   },
@@ -61,7 +61,7 @@ export default {
       const SYNC_URL =  `${API_URL}/sync`;
       const { data } = await axios.put(SYNC_URL);
       this.syncing = false;
-      this.ammountSynced = data.sent;
+      this.amountSynced = data.sent;
       this.changeState(this.stateList.SYNCED);
     },
     resetView() {

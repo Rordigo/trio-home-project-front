@@ -73,7 +73,7 @@ export default {
 <style scoped>
 .main {
   position: relative;
-  height: 100vh;
+  height: 150vh;
   width: 100vw;
 }
 .blobImg {
@@ -85,7 +85,7 @@ export default {
   position: absolute;
   display: flex;
   flex-direction: column;
-  height: 66vh;
+  height: 100vh;
   width: 100vw;
   align-items: center;
   justify-content: center;
@@ -94,8 +94,8 @@ export default {
   position: absolute;
   left: 0px;
   top: 0px;
-  width: 100%;
-  height: 100%;
+  height: 150vh;
+  width: 100vw;
   background: rgba(0, 0, 0, 0.3);
   z-index: 100;
 }

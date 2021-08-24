@@ -57,8 +57,9 @@ export default {
     },
     async syncContacts() {
       this.syncing = true;
-      const REQUEST_URL = process.env.SYNC_URL || "http://localhost:3000/sync";
-      const { data } = await axios.put(REQUEST_URL);
+      const API_URL = process.env.API_URL || "http://localhost:3000"
+      const SYNC_URL =  `${API_URL}/sync`;
+      const { data } = await axios.put(SYNC_URL);
       this.syncing = false;
       this.ammountSynced = data.sent;
       this.changeState(this.stateList.SYNCED);
